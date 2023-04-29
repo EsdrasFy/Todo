@@ -1,0 +1,305 @@
+*,*,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+--back--black:rgb(22, 23, 34);
+--back--black2:rgb(37, 39, 60);
+--color-text: rgb(255, 255, 255);
+--color-text2: rgb(58, 59, 69);
+--img-back1: url(images/bg-desktop-dark.jpg);
+--icon-mode: url(images/icon-sun.svg);
+--check: url(images/marca-ligth.png);
+--close: url(images/close-ligth.png);
+--edit: url(images/edit-ligth.png);
+}
+.body-dark{
+    background:  var(--back--black);
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1111111;
+}
+.body-dark::-webkit-scrollbar{
+    display: none;
+}
+.hide{
+    display: none;
+}
+.banner-dark{
+    min-width: 100%;
+    min-height: 35vh;
+    background: var(--img-back1) no-repeat;
+    background-size: cover;
+}
+.main-container{
+    
+    max-width: 450px;
+    margin: -15rem auto ;
+    
+}
+.button-nigth{
+    width: 28px;
+    height: 28px;
+    background: var(--icon-mode);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+.button-ligth{
+    outline: none;
+    width: 28px;
+    height: 28px;
+    background: url(images/icon-moon.svg);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 15px;
+    color: #FFF;
+    margin-bottom: 40px;
+}
+header img{
+    width: 28px;
+    cursor: pointer;
+    color: black;
+}
+#todo-form{
+    position: absolute; 
+}
+.todo-input-dark{
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--back--black2);
+    color: var(--color-text);
+    width: 450px;
+    padding-left: 15px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.603);
+}
+
+#todo-input::placeholder{
+    color: var(--color-text);
+}
+#todo-input:focus{
+    box-shadow: 0 0 0 0 ;
+    background-color: var(--back--black2);
+    outline: 0;
+}
+
+.submit-dark{
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    top: 0px;
+    right: 20px;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    font-size: 27px;
+    transition: 0.2s;
+}
+#submit:hover{
+    color: var(--back--black);
+}
+#todo-list{
+    margin-top: 115px;
+}
+.todo{
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.808);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-text);
+    border-radius: 3px;
+    background-color: var(--back--black2);
+    font-weight: bold   ;
+    color: var(--color-text);
+    width: 450px;
+    padding-top: 15px;
+    padding-left: 15px;
+    height: 50px;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+.todo span{
+    display: flex;
+    margin-right: 10px;
+    
+}
+.circle1{
+    outline: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: none;
+    color:var(--color-text2);
+    cursor: pointer;
+    background: var(--check) no-repeat ;
+    background-position: center center;
+    background-size: cover;
+}
+.circle1:active{
+    background: var(--color-text) var(--check) no-repeat ;
+    background-position: center center;
+    background-size: 18px;
+}
+.circle2{
+    outline: none;
+    padding: 0px 0px 3px 3px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border  : none;
+    color:var(--color-text2);
+    cursor: pointer;
+    background: var(--close) no-repeat ;
+    background-size: 18px;
+    background-position: center center ;
+}
+.circle2::before{
+    background: var(--color-text) var(--close) no-repeat ;
+    background-size: 15px;
+    background-position: center center ;
+    
+}
+.circle3{
+    outline: none;
+    padding: 0px 0px 3px 3px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: none;
+    color:var(--color-text2);
+    cursor: pointer;
+    background: var(--edit) no-repeat ;
+    background-size: 18px;
+    background-position: center center ;
+    
+}
+.circle3:active{
+    background: var(--color-text) var(--edit) no-repeat ;
+    background-size: 13 .5px;
+    background-position: center center ;
+   
+}
+#edit-input{
+    display: flex;
+    margin: auto;
+    border: 3px solid var(--color-text);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.411);
+    font-size: 18px;
+    padding-left: 30px;
+    color: var(--color-text);
+    background-color: var(--back--black2);
+    width: 390px;
+    height: 45px;
+    border-radius: 3px;
+    
+}
+
+#edit-form{
+    margin-top: 115PX;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.808);
+    background-color: var(--back--black2);
+    border-bottom: 1px solid var(--color-text);
+    color: var(--color-text);
+}
+#edit-input:focus{
+    box-shadow: 0 0 0 0 ;
+    outline: 0;
+}
+    
+#edit-form p{
+    
+    justify-content: center;
+    display: flex;
+    font-size: 26PX;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-text);
+    letter-spacing: 2px;
+}
+#span{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+#span button{
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.411);
+    border: 3px solid var(--color-text);
+    color: var(--color-text);
+    background-color: var(--back--black2);
+    width: 180px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+#span button:hover{
+    text-shadow: none;
+    border: 3px solid var(--color-text);
+    background-color: var(--color-text);
+}
+footer{
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.808);
+    display: flex;
+    justify-content: space-around;
+    color: var(--color-text);
+    background-color: var(--back--black2);
+    width: 450px;
+    height: 45px;
+}
+footer span{
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+footer div{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+footer aside{
+    margin-top: 14.5px;   
+}
+footer button{
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    text-decoration: underline;
+    background: none;
+    color: var(--color-text);
+    
+}
+.done {
+     background-color: #b3b3b3;
+  }
+  
+.done p {
+    color: var(--color-text);
+   
+    text-decoration: line-through;
+    font-style: italic;
+  }
+  @media screen and (max-width:550px){
+    .body-dark{
+      background-color: red;
+    }
+    .banner-dark{
+       
+    }
+  }

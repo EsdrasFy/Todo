@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="body-dark" id="body">
+  <div class="container">
+      <div class="banner-dark"></div>
+        <div class="main-container">
+          <main>
+            <header>TODO
+              <span class="nigth">
+                 <button class="button-nigth" id="button-mode"></button>
+                </span>
+              </header>
+          </main>
+          <div class="add-todo">
+            <form id="todo-form">
+              <input type="text" 
+                     id="todo-input"
+                     placeholder="Create a new todo" class="todo-input-dark">
+              <button type="submit" id="submit" class="submit-dark">+</button>
+                  
+             
+            </form>
+          </div>
+          <div id="todo-list">
+          
+      </div>
+      <form id="edit-form" class="hide">
+            <p>Edit Your Todo</p>
+            <div class="form-control">
+            <input type="text" id="edit-input">
+            <aside id="span">
+              <button type="submit">Confirm</button>
+              
+              <button id="cancel-edit-btn">Cancel</button>
+
+              <button class="hide">Edit</button>
+              
+              <button class="hide">Back</button>
+            </aside>
+            </div>
+        </form>
+            <footer class="footer">
+              <span id="itens-left"><p >5</p><p>itens left</p></span>
+              <div>
+                <button id="all" value="all" class="filter-select">All</button>
+                <button id="active" value="active" class="filter-select">Active</button>
+                <button id="completed" value="completed" class="filter-select">Completed</button>
+              </div>
+              <aside><button id="clear-completed" value="clearcompleted">Clear Completed</button>
+          </footer>
+        <script src="main.js"></script>
+</body>
+</html>
