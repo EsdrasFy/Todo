@@ -71,20 +71,25 @@ header img{
     cursor: pointer;
     color: black;
 }
+
 #todo-form{
     position: absolute; 
 }
 .todo-input-dark{
+    flex-wrap: wrap;
     font-weight: bold;
     border: none;
     border-radius: 3px;
     background-color: var(--back--black2);
     color: var(--color-text);
     width: 450px;
-    padding-left: 15px;
-    height: 50px;
+    padding-left: 17px;
+    padding-right: 60px;
+    padding-top: 25px;
+    min-height: 40px;
     font-size: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.603);
+    overflow-y: hidden;
 }
 
 #todo-input::placeholder{
@@ -106,14 +111,14 @@ header img{
     border: none;
     background: none;
     color: var(--color-text);
-    font-size: 27px;
+    font-size: 40px;
     transition: 0.2s;
 }
 #submit:hover{
     color: var(--back--black);
 }
 #todo-list{
-    margin-top: 115px;
+    margin-top: 145px;
 }
 .todo{
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.808);
@@ -124,16 +129,24 @@ header img{
     background-color: var(--back--black2);
     font-weight: bold   ;
     color: var(--color-text);
-    width: 450px;
-    padding-top: 15px;
+    max-width: 450px;
+    
     padding-left: 15px;
-    height: 50px;
+    
+    min-height: 40px ;
     font-size: 20px;
-    overflow-x: hidden;
+    
+}
+.todo p {
+    margin-top: 15px;
+    margin-bottom: 15PX;
+
+    word-break: break-all;
+    
 }
 .todo span{
     display: flex;
-    margin-right: 10px;
+    margin: auto 10px    ;
     
 }
 .circle1{
@@ -195,6 +208,7 @@ header img{
 #edit-input{
     display: flex;
     margin: auto;
+    padding-right: 25px;
     border: 3px solid var(--color-text);
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.411);
     font-size: 18px;
@@ -204,7 +218,7 @@ header img{
     width: 390px;
     height: 45px;
     border-radius: 3px;
-    
+    overflow-y: hidden;
 }
 
 #edit-form{
@@ -296,10 +310,13 @@ footer button{
     font-style: italic;
   }
   @media screen and (max-width:550px){
-    .body-dark{
-      background-color: red;
+    .main-container{
+        max-width: 370px;
     }
-    .banner-dark{
-       
+    .todo-input-dark{
+        max-width: 370px;
+    }
+    footer{
+        max-width: 370px;
     }
   }
